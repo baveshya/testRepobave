@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<TITLE> LOCAL STORAGE</TITLE>
+<script type="text/javascript">
+
+  var sessions=[];
+  function store()
+  {
+     var obj= document.getElementById("name").value;
+     alert(obj);
+    
+     
+
+ 
+sessions.push(obj);
+
+ console.log(sessions);
+   
+  localStorage.setItem('sessions', JSON.stringify(sessions));
+   
+
+    
+    var restoredSession = JSON.parse(localStorage.getItem('sessions'));
+
+
+console.log(restoredSession);
+}
+</script>
+</head>
+
+
+
+
+ <input type="text" id="name"/><br>
+
+<button  onclick="store()">Copy Text</button>
+
+</body>
+</html>
+
+
+
+																																																																																															
+
+
+
